@@ -30,6 +30,10 @@ class TmuxWindow:
         self.__stream.append(Keys.Enter)
         return self
 
+    def command(self, string: str) -> 'TmuxWindow':
+        """Note: This method is just like using '.write(string).enter'"""
+        return self.write(string).enter
+
     @property
     def shell(self) -> str:
         # A simple comment line
